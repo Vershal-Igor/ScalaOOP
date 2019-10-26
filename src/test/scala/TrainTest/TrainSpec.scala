@@ -18,4 +18,12 @@ class TrainSpec extends FlatSpec {
     assert(train.getBaggageAmount() === 160)
   }
 
+  "Train " should "find 8 carriages with 20 passangers" in {
+    assert(train.findCarriagesWithCertainPassengerAmount(20).size() === 8)
+  }
+
+  "Train " should "not find carriages with 10 passangers" in {
+    assert(train.findCarriagesWithCertainPassengerAmount(10).size() === 0)
+  }
+
 }
